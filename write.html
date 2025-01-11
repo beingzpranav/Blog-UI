@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Write Article - IEEE PIET Blog</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- TinyMCE Rich Text Editor -->
+  <script src="https://cdn.tiny.cloud/1/YOUR_API_KEY/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+  <script>
+    tinymce.init({
+      selector: '#article-content',
+      height: 400,
+      plugins: 'link image code',
+      toolbar: 'undo redo | bold italic | alignleft aligncenter alignright | code'
+    });
+  </script>
+</head>
+<body>
+  <!-- Header and Navbar -->
+  <header>
+    <nav>
+      <div class="logo">IEEE PIET Blog</div>
+      <div class="hamburger" id="hamburger">
+        <i class="fas fa-bars"></i>
+      </div>
+      <div class="nav-container" id="nav-container">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="write.html">Write</a></li>
+          <li><a href="leaderboard.html">Leaderboard</a></li>
+        </ul>
+        <div class="nav-right">
+          <button id="theme-toggle" class="btn-theme">
+            <i class="fas fa-moon"></i> <!-- Default icon for dark mode -->
+          </button>
+          <a href="auth.html" class="btn-login">Login</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Write Article Section -->
+  <section class="write-article">
+    <h2>Write an Article</h2>
+    <form id="article-form">
+      <label for="article-title">Title</label>
+      <input type="text" id="article-title" placeholder="Enter article title" required>
+
+      <label for="article-content">Content</label>
+      <textarea id="article-content" placeholder="Start writing your article..."></textarea>
+
+      <div class="form-actions">
+        <button type="button" class="btn-secondary">Save Draft</button>
+        <button type="submit" class="btn-primary">Publish</button>
+      </div>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="about">
+        <h3>About IEEE CIS PIET</h3>
+        <p>Empowering students through technical knowledge sharing and innovation at Poornima Institute of Engineering & Technology.</p>
+      </div>
+      <div class="quick-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="connect">
+        <h3>Connect With Us</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 IEEE CIS PIET. All rights reserved. Designed and developed by Vikas Sharma</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
